@@ -2,10 +2,10 @@
 #include <iostream>
 
 int main() {
-    Complex z = Complex();
+    Complex z1 = Complex();
+    Complex z2 = Complex();
 
-    std::cout << z << std::endl;
+    std::cout << (z1 == z2) << std::endl; // Works
+    std::cout << z1 << std::endl;         // Works
     return 0;
 }
-
-
