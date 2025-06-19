@@ -17,6 +17,20 @@ bool operator==(const Complex& lhs, const Complex& rhs) {
     return (lhs.m_real == rhs.m_real) && (lhs.m_imaginary == rhs.m_imaginary);
 }
 
+Complex operator+(const Complex& lhs, const Complex& rhs) {
+    return Complex(lhs.m_real + rhs.m_real, lhs.m_imaginary + rhs.m_imaginary);
+}
+
+Complex operator-(const Complex& lhs, const Complex& rhs) {
+    return Complex(lhs.m_real - rhs.m_real, lhs.m_imaginary - rhs.m_imaginary);
+}
+
+Complex operator*(const Complex& lhs, const Complex& rhs) {
+    const double real_part = (lhs.m_real * rhs.m_real) - (lhs.m_imaginary * rhs.m_imaginary);
+    const double imaginary_part = (lhs.m_real * rhs.m_imaginary) + (lhs.m_imaginary * rhs.m_real);
+    return Complex(real_part, imaginary_part);
+}
+
 std::ostream& operator<<(std::ostream& os, const Complex& obj) {
     return os << obj.m_real << " + i" << obj.m_imaginary;
 }

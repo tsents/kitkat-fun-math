@@ -8,7 +8,13 @@ public:
     Complex(double real, double imaginary);
 
     friend std::ostream& operator<<(std::ostream& os, const Complex& obj);
-    friend bool operator==(const Complex& rhs, const Complex& lhs);
+
+    friend bool operator==(const Complex& lhs, const Complex& rhs);
+
+    friend Complex operator+(const Complex& lhs, const Complex& rhs);
+    friend Complex operator-(const Complex& lhs, const Complex& rhs);
+    friend Complex operator*(const Complex& lhs, const Complex& rhs);
+
     double getReal() const;
     double getImaginary() const;
 
