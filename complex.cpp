@@ -13,6 +13,13 @@ double Complex::getImaginary() const {
     return m_imaginary;
 }
 
+void Complex::setReal(double real) {
+    m_real = real;
+}
+void Complex::setImaginary(double imaginary) {
+    m_imaginary = imaginary;
+}
+
 bool operator==(const Complex& lhs, const Complex& rhs) {
     return (lhs.m_real == rhs.m_real) && (lhs.m_imaginary == rhs.m_imaginary);
 }
