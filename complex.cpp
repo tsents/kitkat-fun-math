@@ -32,5 +32,5 @@ Complex operator*(const Complex& lhs, const Complex& rhs) {
 }
 
 std::ostream& operator<<(std::ostream& os, const Complex& obj) {
-    return os << obj.m_real << " + i" << obj.m_imaginary;
+    return os << obj.m_real << " + " << obj.m_imaginary << "i";
 }
